@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hiberante3映射文件的DTD信息 -->  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.yqq.struts2.clothinghire.entity">
+	<class name="User" table="user">
+		<id name="userId" type="java.lang.Integer">
+			<column name="userid"/>
+			<generator class="identity"/>
+		</id>
+		
+		<property name="userName" type="java.lang.String">
+			<column name="username" length="20" not-null="true"></column>
+		</property>
+		<property name="passwd" type="java.lang.String">
+			<column name="passwd" length="20" not-null="true"></column>
+		</property>
+	</class>
+</hibernate-mapping>
